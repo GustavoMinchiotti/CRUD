@@ -29,3 +29,45 @@ http://localhost:3000/perfil
 
 NO CERRAR LA TERMINAL
 
+Descargue la extensión chrome json formatter.
+
+**Ver curso de HTTP**
+
+### AJAX Asynchronous JavaScript and XML
+
+para comenzar creo la carpeta `service` y dentro el archivo `CLIENT-SERVICE.js`. Luego lo conecto desde el html.
+
+![img_3.png](img_3.png)
+
+Compruebo la comunicación
+
+![img_4.png](img_4.png)
+
+Creo una request
+
+![img_6.png](img_6.png)
+
+![img_7.png](img_7.png)
+
+El resultado es una nueva instancia de la clase HTTPrequest con varios métodos
+
+![img_8.png](img_8.png) _Busco respuesta del servidor_
+
+_Verifico la respuesta_
+
+![img_9.png](img_9.png) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
