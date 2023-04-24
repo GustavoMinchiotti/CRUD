@@ -57,6 +57,35 @@ _Verifico la respuesta_
 
 ![img_9.png](img_9.png) 
 
+### Creando templates
+
+Creo un, `template` con el código HTML para generar en Js. los campos del formulario.
+
+corté la seccion de html que creaba al usuario y creé en Js una función que lo genere desde ahí.
+
+![img_10.png](img_10.png)
+
+En este paso puedo borrar las etiquetas `tr` porque ya indico que lo genere, y hago dinámicos los campos 
+Email y nombre queda así:
+
+![img_11.png](img_11.png)
+
+#### Ahora modifico a `miHTTP`
+
+![img_12.png](img_12.png)
+
+Esto va a dar un error:
+
+![img_13.png](img_13.png) 
+
+Porque estamos usando un método de arrays y no lo ve como código sino como una string entonces lo debo transformar.
+
+![img_14.png](img_14.png)
+
+![img_15.png](img_15.png)
+
+### Lidiando con Promises
+
 
 
 
