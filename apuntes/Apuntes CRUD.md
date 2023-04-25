@@ -86,10 +86,20 @@ Porque estamos usando un método de arrays y no lo ve como código sino como una
 
 ### Lidiando con Promises
 
+El objeto Promise representa la eventual finalización (o falla) de una operación asincrónica y su valor resultante.
 
+Una Promesa (Promise) es un proxy de un valor que no necesariamente se conoce cuando se crea la promesa. Le permite 
+asociar controladores con el valor eventual de éxito o el motivo de falla de una acción asíncrona.
 
+Modifico el código para que sea una promesa.
 
+![img_16.png](img_16.png)
 
+llamo a la promesa
+
+![img_18.png](img_18.png)
+
+![img_19.png](img_19.png)
 
 
 
