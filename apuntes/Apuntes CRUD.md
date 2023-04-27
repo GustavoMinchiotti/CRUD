@@ -101,12 +101,31 @@ llamo a la promesa
 
 ![img_19.png](img_19.png)
 
+### Reescribiendo con Fetch API
 
+La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones 
+y respuestas. También provee un método global fetch() (en-US) que proporciona una forma fácil y lógica de obtener 
+recursos de forma asíncrona por la red.
 
+fetch toma automáticamente el método GET
 
+Este ejemplo reduce mucho las líneas de código
 
+![img_20.png](img_20.png)
 
+Y puede ser reducido a esto porque al ser funciones simples podemos eliminar las llaves y el return.
 
+![img_21.png](img_21.png)
 
+### Refactorizando responsabilidades
 
+Los cambios son muchos, creo un archivo separado para el manejo del html, desde el JS principal (CLIENT-SERVICE) exporto 
+ahora al nuevo archivo cliente_controlador, por esa razón debo modificar en el html la ruta y decir que ahora son tipo modulos
+
+![img_22.png](img_22.png)
+
+En el nuevo controlador comunico a través de, `serviciosCliente.` a la función que obtiene datos para rellenar los 
+campos de la tabla con el objeto nuevo
+
+![img_23.png](img_23.png)
 
