@@ -129,3 +129,129 @@ campos de la tabla con el objeto nuevo
 
 ![img_23.png](img_23.png)
 
+### Event Loop
+
+http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+## Creando un cliente
+
+Creo un módulo para crear los nuevos registros y lo conecto al html `registrar cliente`.
+
+![img_24.png](img_24.png)
+
+Necesito escuchar el submit .. Ahora vamos a tener nuestra constante formulario y nosotros podemos ya tener disponibles 
+diferentes métodos. El que queremos es addEventListener, es decir agregar un escuchador. Recibe aquí dos parámetros. 
+El primero es el tipo de evento que quiere escuchar, que en este caso va a ser submit y el segundo, una función que se 
+va a disparar una vez que el usuario o que se cumpla esta condición.
+
+![img_25.png](img_25.png)
+
+Los formularios tienen un comportamiento _ya definido dentro de JavaScript_ o dentro del navegador. 
+Lo que nosotros queremos es prevenir que funcione como ya está definido. Para eso, nosotros aquí recibimos nuestro 
+evento.
+
+Dentro de este evento tenemos una propiedad que se llama `.preventDefault` y lo mandamos a llamar. Es decir, no queremos
+que este formulario funcione como normalmente debería. Para eso, vamos a utilizar este método. Ahora, ya tenemos nuestro
+evento. Esta función que se mandó a llamar.
+
+![img_26.png](img_26.png)
+
+Para recuperar los datos en este caso usamos los `data-attributes` ![img_27.png](img_27.png) 
+
+Solo queremos el valor así que agregamos `.value`
+
+![img_29.png](img_29.png)
+
+![img_28.png](img_28.png)
+
+Ya tenemos capturada la información, ahora necesitamos delegar la responsabilidad a otra función que
+reciba esos datos y que se encargue de enviárselos a nuestro servidor o a nuestra API.
+
+en el archivo `CLIENT-SERVICE` creo la función y le paso los parámetros nombre y mail - 
+
+**Muy importante No debo usar `get` que está por defecto** necesito usar POST
+
+Vamos a ver entonces cómo es que podemos decir la **fetch** que trabaje con otro método.
+ 
+Primero va a recibir la URL a la cual se va a conectar y después va a recibir un segundo parámetro, que va a ser un _**objeto.**_ 
+En este objeto vamos a definir las demás propiedades de la llamada. Nosotros vamos a decir aquí cuál va a ser el método 
+o method: Que será POST Después, dentro de este mismo objeto, vamos a definirle los _encabezados_. 
+Estos encabezados son como para tener un estándar o que el servidor sepa qué tipo de archivo es el que va a recibir. 
+Vamos a poner entonces es headers y va a ser un nuevo objeto, y dentro de este objeto, vamos a definir el Content-Type. 
+A este Content-Type le vamos a decir que va a ser un "application/json".
+
+![img_30.png](img_30.png)
+
+Por último le vamos a definir también cuál va a ser el body o el cuerpo, que al final de cuenta termina siendo un objeto. 
+En este objeto es donde nosotros vamos a poner toda la información que nosotros queremos que se envíe a través del cuerpo 
+de la petición. Entonces vamos a poner que queremos el nombre y el correo electrónico. 
+La comunicación http trabaja con texto, lo que necesitamos ahora es transformar este objeto en texto.
+
+Utilizando JSON.stringify  Entonces lo que le estamos mandando aquí ya es un objeto, pero JSON.stringify se va a encargar 
+de formatearlo en texto para que lo pueda enviar http. 
+
+![img_31.png](img_31.png)
+
+Antes de probar todo esto, es si nosotros venimos aquí a nuestro db.json, tenemos tanto el nombre, el correo electrónico y el `id.`
+para simplificar usamos una librería -- UUID CDN -- https://cdnjs.com/libraries?q=uuid
+
+No la instalo sino que la agrego via link al html.
+
+![img_33.png](img_33.png)
+
+Puedo acceder al método desde la consola: escribiendo uuid
+
+![img_34.png](img_34.png)
+
+usamos la version 4 con esta sintaxis: `uuid.v4()` + enter y cada vez que lo use genera un ID nuevo.
+
+![img_35.png](img_35.png)
+
+ Así lo uso
+
+![img_36.png](img_36.png)
+
+Ahora lo debo exportar: 
+
+![img_38.png](img_38.png)
+
+Lo importo en registro-controlador:
+
+![img_37.png](img_37.png)
+
+![img_39.png](img_39.png)
+
+En el controlador de registros queda así: 
+
+![img_40.png](img_40.png)
+
+Esta es la respuesta:
+
+![img_41.png](img_41.png)
+
+Y todo esto generó un nuevo usuario en la base de datos:
+
+![img_42.png](img_42.png)
+
+Para mejorar la experiencia de usuario lo redirijo a la página de registro completado:
+
+![img_43.png](img_43.png)
+
+Queda esto luego de completar
+
+![img_44.png](img_44.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,9 +10,21 @@
 
 const listaClientes = () => fetch('http://localhost:3000/perfil').then(respuesta => respuesta.json());
 
+const crearClientes = (nombre, email) => {
+    return fetch('http://localhost:3000/perfil', {
+        method: "POST",
+        headers: {
+            "Content-Type": "Application/json"
+        },
+        body: JSON.stringify({ nombre, email, id: uuid.v4() }) // parsea la info a string -- con uuid.v4() genero los Id
+    });
+}
+
 export const serviciosCliente = {   //  creo este objeto para exportar los distintos controladores
-    listaClientes
+    listaClientes,
+    crearClientes,
 };
+
 
 
 //* En este archivo lo que nosotros vamos a tener, es esta función que se va a encargar de hacer la comunicación

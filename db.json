@@ -2,8 +2,18 @@
   "perfil": [
     {
       "nombre": "GustavoMMB",
-      "email": "Gustavomonchiotti@gmail.com",
+      "email": "Gustavominchiotti@gmail.com",
       "id": 1
+    },
+    {
+      "nombre": "GUSTAVO MARCELO",
+      "email": "gustavominchiotti@gmail.com",
+      "id": "d2072fa0-4044-4cd5-b18a-d855b92f06cc"
+    },
+    {
+      "nombre": "Gustavo",
+      "email": "gustavominchiotti@gmail.com",
+      "id": "1990fbdb-7c59-4d4f-84b6-aca6f8ecc57a"
     }
   ]
 }
