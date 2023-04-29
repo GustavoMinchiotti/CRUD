@@ -241,7 +241,40 @@ Queda esto luego de completar
 
 ![img_44.png](img_44.png)
 
+### Borrar clientes
 
+https://app.aluracursos.com/course/js-web-crud-javascript-asincrono/task/77103
+
+En esta clase hace un refactor del código:
+
+![img_45.png](img_45.png)
+
+Cambia a este
+
+![img_46.png](img_46.png) trata como un objeto a los datos / parámetros
+
+Creo función para borrar clientes, en `cliente-controlador` dentro de la func. `crear nueva linea` selecciono el botón 
+**Hay uno solo!!** porque edit aunque en pantalla parezca un botón es un `<a>`.
+
+Luego lo escucho.
+
+![img_47.png](img_47.png)
+
+Ahora que escucho el botón debo ir al backend y crear una nueva función para la lógica de borrar
+
+![img_48.png](img_48.png) son backticks no comilla
+
+De vuelta en cliente controlador termina el código
+
+![img_49.png](img_49.png)
+
+
+Lo que aprendimos en esta aula:
+
+* Usar el método closest para encontrar el elemento del DOM más próximo al cual queremos remover.
+* Crear un cliente utilizando el verbo http POST.
+* Remover un elemento del dom con el método remove().
+* Borrar un cliente utilizando el verbo http DELETE.
 
 
 

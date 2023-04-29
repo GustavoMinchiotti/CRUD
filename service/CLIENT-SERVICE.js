@@ -20,9 +20,17 @@ const crearClientes = (nombre, email) => {
     });
 }
 
+const eliminarCliente = (id) => {
+    return fetch(`http://localhost:3000/perfil/${id}`, {
+        method: "DELETE",
+
+    })
+}
+
 export const serviciosCliente = {   //  creo este objeto para exportar los distintos controladores
     listaClientes,
     crearClientes,
+    eliminarCliente,
 };
 
 

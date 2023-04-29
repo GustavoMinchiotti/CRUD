@@ -6,14 +6,9 @@
       "id": 1
     },
     {
-      "nombre": "GUSTAVO MARCELO",
-      "email": "gustavominchiotti@gmail.com",
-      "id": "d2072fa0-4044-4cd5-b18a-d855b92f06cc"
-    },
-    {
-      "nombre": "Gustavo",
-      "email": "gustavominchiotti@gmail.com",
-      "id": "1990fbdb-7c59-4d4f-84b6-aca6f8ecc57a"
+      "nombre": "otro",
+      "email": "otro@mail.com",
+      "id": "ee47fb67-7f89-4b52-b534-f976f52d4866"
     }
   ]
 }
