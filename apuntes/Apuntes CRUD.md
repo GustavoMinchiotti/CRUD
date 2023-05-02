@@ -276,6 +276,73 @@ Lo que aprendimos en esta aula:
 * Remover un elemento del dom con el método remove().
 * Borrar un cliente utilizando el verbo http DELETE.
 
+## Editar datos
+
+Para editar datos primero debo identificar a cual cliente estoy editando, entonces en la etiqueta `<a>` en la ruta le 
+agrego: `?${id}` 
+
+![img_50.png](img_50.png)
+
+se puede ver en el navegador: 
+
+![img_51.png](img_51.png) -- ![img_52.png](img_52.png)
+
+Para poder trabajar con esos parámetros le ponemos nombre: `? id = ${id}` **¡para que funcione se escribe todo junto esto es solo ejemplo!**
+
+![img_53.png](img_53.png)
+
+Luego de hacer el link desde html al script de actualizar_controlador creo una const : `const url = new URL(window.location)`
+con este resultado:
+
+![img_54.png](img_54.png)
+
+![img_55.png](img_55.png) Busca el parámetro en este caso id
+
+![img_56.png](img_56.png)
+
+Creo la función para obtener los datos
+
+![img_58.png](img_58.png)
+
+![img_60.png](img_60.png)
+
+resultado
+
+![img_61.png](img_61.png)
+
+Lo que necesitamos hacer es indicarle a este formulario cuál es el nombre y que lo autocomplete con nombre, y el email
+
+![img_62.png](img_62.png)
+
+### Editando (No entendí)
+
+![img_63.png](img_63.png)
+
+![img_64.png](img_64.png)
+
+![img_65.png](img_65.png)
+
+### Async await
+
+Código mejorado:
+
+![img_66.png](img_66.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
